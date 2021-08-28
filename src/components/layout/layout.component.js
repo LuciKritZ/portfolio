@@ -1,10 +1,16 @@
 import React from 'react';
-import { Box } from '@material-ui/core';
-import useStyles from './layout.styles';
+import { Box, Grid } from '@material-ui/core';
+import Header from '../header/header.component';
+import useLayoutStyles from './layout.styles';
 
-const Layout = ({ children }) => {
-    const classes = useStyles();
-    return <Box className={classes.root}>{children}</Box>;
+const Layout = ({ children, changeTheme }) => {
+    const classes = useLayoutStyles();
+    return (
+        <Box className={classes.layoutRoot}>
+            <Header changeTheme={changeTheme} />
+            <Grid container>{children}</Grid>
+        </Box>
+    );
 };
 
 export default Layout;

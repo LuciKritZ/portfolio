@@ -1,10 +1,11 @@
 import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles({
-    root: {
-        margin: 0,
+const useLayoutStyles = makeStyles({
+    layoutRoot: {
+        margin: '0px auto !important',
         padding: 0,
+        maxWidth: '1280px',
     },
 });
 
-export default useStyles;
+export default useLayoutStyles;
