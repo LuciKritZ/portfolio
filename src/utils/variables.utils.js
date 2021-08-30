@@ -5,4 +5,6 @@ const isCurrentThemeDark = () => {
     }
 };
 
-export { isCurrentThemeDark };
+const CURRENT_THEME = '#3f51b5 !important';
+
+export { isCurrentThemeDark, CURRENT_THEME };

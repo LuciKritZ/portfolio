@@ -10,9 +10,6 @@ const Header = ({ changeTheme }) => {
     const isDarkTheme = isCurrentThemeDark();
 
     const generatedClassesAndResources = {
-        img: {
-            src: isDarkTheme ? '/assets/icon/logo-dark.png' : '/assets/icon/logo.png',
-        },
         menuOptions: {
             className: clsx('option-link', isDarkTheme && 'option-link-dark'),
         },
@@ -49,11 +46,7 @@ const Header = ({ changeTheme }) => {
 
     return (
         <Grid container className={classes.headerRoot}>
-            <img
-                className="logo-image"
-                src={generatedClassesAndResources.img.src}
-                alt="LuciKritZ logo"
-            />
+            <div className="header-logo-container">{`<LuciKritZ />`}</div>
             <div className="header-links-container">
                 {menuOptions.map((option) => (
                     <Link
