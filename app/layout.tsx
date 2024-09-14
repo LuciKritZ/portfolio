@@ -1,19 +1,10 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
 import './globals.css';
+import { Fira_Code } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import Header from '@/components/header.component';
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-});
-
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
-});
+const FiraCode = Fira_Code({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -29,12 +20,14 @@ export default function RootLayout({
     <html lang='en'>
       <body
         className={cn(
-          geistMono.variable,
-          geistSans.variable,
+          FiraCode.className,
           'min-h-screen bg-background font-sans antialiased'
         )}
       >
-        {children}
+        <div className='relative flex min-h-dvh flex-col bg-background'>
+          <Header />
+          <main className='flex-1'>{children}</main>
+        </div>
       </body>
     </html>
   );
