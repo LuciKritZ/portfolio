@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { buttonVariants } from './ui/button';
 import Nav from './nav/index.nav';
 import { SmNav } from './nav/sm.nav';
+import ToggleTheme from './toggle-theme.component';
 
 const Header = () => {
   return (
@@ -35,6 +36,7 @@ const Header = () => {
               )
             )}
 
+            <ToggleTheme />
             {/* Navbar for smaller devices */}
             <SmNav />
           </nav>

@@ -3,6 +3,7 @@ import './globals.css';
 import { Fira_Code } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import Header from '@/components/header.component';
+import Providers from '@/providers/index.provider';
 
 const FiraCode = Fira_Code({ subsets: ['latin'] });
 
@@ -24,10 +25,12 @@ export default function RootLayout({
           'min-h-screen bg-background font-sans antialiased'
         )}
       >
-        <div className='relative flex min-h-dvh flex-col bg-background'>
-          <Header />
-          <main className='flex-1'>{children}</main>
-        </div>
+        <Providers>
+          <div className='relative flex min-h-dvh flex-col bg-background'>
+            <Header />
+            <main className='flex-1'>{children}</main>
+          </div>
+        </Providers>
       </body>
     </html>
   );
