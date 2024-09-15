@@ -1,12 +1,25 @@
 import { posts } from '#site/content';
 import PostsList from '@/components/posts/list.posts';
+import QueryPagination from '@/components/posts/pagination.post';
 import { sortPosts } from '@/lib/utils';
 
-type Props = {};
+const POSTS_PER_PAGE = 5;
 
-const BlogPage = (props: Props) => {
-  const displaysPosts = posts;
+interface BlogPageProps {
+  searchParams: {
+    page?: string;
+  };
+}
+
+const BlogPage = ({ searchParams }: BlogPageProps) => {
+  const currentPage: number = Number(searchParams?.page || 1);
   const sortedPosts = sortPosts(posts.filter((post) => post.published));
+
+  const displaysPosts = sortedPosts.slice(
+    POSTS_PER_PAGE * (currentPage - 1),
+    POSTS_PER_PAGE * currentPage
+  );
+  const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
 
   return (
     <div className='container max-w-4xl py-6 lg:py-10 mx-auto'>
@@ -19,7 +32,9 @@ const BlogPage = (props: Props) => {
         </div>
       </div>
 
-      <PostsList posts={sortedPosts} />
+      <PostsList posts={displaysPosts} />
+
+      <QueryPagination totalPages={totalPages} className='justify-end mt-4' />
     </div>
   );
 };

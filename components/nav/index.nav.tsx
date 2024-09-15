@@ -21,7 +21,7 @@ const Nav = () => {
           key={name}
           href={href}
           className={cn(
-            'text-sm font-medium transition-colors hover:text-primary capitalize hide-in-small-devices',
+            'text-sm font-medium transition-colors hover:text-primary capitalize hide-in-small-devices mx-2',
             pathname === href ? 'text-foreground' : 'text-foreground/60'
           )}
         >
