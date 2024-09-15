@@ -4,9 +4,9 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 const config: Config = {
   darkMode: ['class'],
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './providers/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -61,6 +61,9 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)',
       },
     },
+  },
+  variants: {
+    extends: {},
   },
   plugins: [require('tailwindcss-animate')],
 };

@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -62,19 +56,40 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
 
 @layer components {
   .hide-in-small-devices {
     @apply hidden sm:inline-flex;
+  }
+
+  .space-x-2 {
+    @apply mr-2 ml-2;
+  }
+
+  .space-y-4 {
+    @apply mt-4 mb-4;
+  }
+
+  .space-x-4 {
+    @apply mr-4 ml-4;
+  }
+
+  .space-y-6 {
+    @apply mt-6 mb-6;
+  }
+
+  .space-x-6 {
+    @apply mr-6 ml-6;
   }
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import Link, { LinkProps } from 'next/link';
-import React, { HTMLAttributes, useState } from 'react';
+import { HTMLAttributes, useState } from 'react';
 import {
   Sheet,
   SheetContent,
