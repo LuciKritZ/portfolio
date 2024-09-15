@@ -11,7 +11,7 @@ export const siteConfig = {
   url: 'https://krishalshah.in',
   description:
     "I'm a Full Stack Software Engineer passionate about crafting seamless digital experiences. With a robust background in JavaScript and its ecosystem — from Next, React, & Express to React Native for mobile development — I bring a versatile skill set to the table.",
-  author: 'LuciKritZ',
+  author: 'Krishal',
   links,
   navigationMenuOptions: [
     {
