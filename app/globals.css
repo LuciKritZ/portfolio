@@ -73,23 +73,27 @@
     @apply hidden sm:inline-flex;
   }
 
-  .space-x-2 {
+  .spacing-x-0 {
+    @apply mr-0 ml-0;
+  }
+
+  .spacing-x-2 {
     @apply mr-2 ml-2;
   }
 
-  .space-y-4 {
+  .spacing-y-4 {
     @apply mt-4 mb-4;
   }
 
-  .space-x-4 {
+  .spacing-x-4 {
     @apply mr-4 ml-4;
   }
 
-  .space-y-6 {
+  .spacing-y-6 {
     @apply mt-6 mb-6;
   }
 
-  .space-x-6 {
+  .spacing-x-6 {
     @apply mr-6 ml-6;
   }
 }

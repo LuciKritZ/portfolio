@@ -5,12 +5,12 @@ interface Props {
   posts?: Post[];
 }
 
-const Posts = ({ posts = [] }: Props) => {
+const PostsList = ({ posts = [] }: Props) => {
   if (!posts.length) {
-    return <p className='space-y-6 text-center'>Nothing to see here, yet.</p>;
+    return <p className='spacing-y-6 text-center'>Nothing to see here, yet.</p>;
   }
   return (
-    <ul className='flex flex-col space-x-4 lg:space-x-6'>
+    <ul className='flex flex-col'>
       {posts.map(({ slug, date, title, description = '' }) => (
         <li key={slug}>
           <PostItem
@@ -25,4 +25,4 @@ const Posts = ({ posts = [] }: Props) => {
   );
 };
 
-export default Posts;
+export default PostsList;

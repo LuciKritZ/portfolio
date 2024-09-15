@@ -12,7 +12,7 @@ interface PostItemProps {
 
 const PostItem = ({ slug, title, description, date }: PostItemProps) => {
   return (
-    <article className='flex flex-col gap-2 border-border border-b py-3'>
+    <article className='flex flex-col gap-2 border-border border-b py-3 mx-4 lg:mx-6'>
       <div>
         <h2 className='text-2xl font-bold'>
           <Link href={slug}>{title}</Link>
@@ -30,7 +30,7 @@ const PostItem = ({ slug, title, description, date }: PostItemProps) => {
 
         <Link
           href={slug}
-          className={cn(buttonVariants({ variant: 'link' }), 'py-0')}
+          className={cn(buttonVariants({ variant: 'link' }), 'py-0 px-0')}
         >
           Read more →
         </Link>

@@ -10,9 +10,9 @@ const Nav = () => {
   const pathname = usePathname();
 
   return (
-    <nav className='flex items-center space-x-4 lg:space-x-6'>
-      <Link href='/' className={cn('mr-6 flex items-center space-x-2')}>
-        <Logo />
+    <nav className='flex items-center spacing-x-4 lg:spacing-x-6'>
+      <Link href='/' className={cn('mr-6 flex items-center spacing-x-2')}>
+        <Logo className='-mt-1' />
       </Link>
 
       {/* Links */}

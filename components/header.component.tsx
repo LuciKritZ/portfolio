@@ -11,7 +11,7 @@ const Header = () => {
     <header className='sticky top-0 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
       <div className='container flex h-14 max-w-4xl items-center mx-auto'>
         <Nav />
-        <div className='flex flex-1 items-center justify-end space-x-2'>
+        <div className='flex flex-1 items-center justify-end spacing-x-2'>
           <nav className='flex items-center'>
             {/* Render Nav Icons */}
             {siteConfig.socialLinks.map(
@@ -36,7 +36,9 @@ const Header = () => {
               )
             )}
 
+            {/* Change theme */}
             <ToggleTheme />
+
             {/* Navbar for smaller devices */}
             <SmNav />
           </nav>

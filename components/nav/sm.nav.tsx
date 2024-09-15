@@ -55,7 +55,11 @@ export const SmNav = () => {
         {/* @see https://stackoverflow.com/a/78728118 */}
         <SheetDescription className='hidden'>Navigation Menu</SheetDescription>
         <SheetTitle>
-          <SmNavLink href='/' className='flex items-center'>
+          <SmNavLink
+            href='/'
+            className='flex items-center'
+            onClick={() => setOpen(false)}
+          >
             <Logo />
           </SmNavLink>
         </SheetTitle>
