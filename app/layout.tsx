@@ -5,6 +5,7 @@ import Header from '@/components/header.component';
 import Providers from '@/providers/index.provider';
 import './globals.css';
 import { siteConfig } from '@/config/site.config';
+import Footer from '@/components/footer.component';
 
 const FiraCode = Fira_Code({ subsets: ['latin'] });
 
@@ -38,6 +39,7 @@ export default function RootLayout({
           <div className='relative flex min-h-dvh flex-col bg-background'>
             <Header />
             <main className='flex-1'>{children}</main>
+            <Footer />
           </div>
         </Providers>
       </body>
