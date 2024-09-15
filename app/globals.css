@@ -69,6 +69,11 @@
 }
 
 @layer components {
+  .h-screen-without-header {
+    /* header height: 58px */
+    height: calc(100vh - 58px);
+  }
+
   .hide-in-small-devices {
     @apply hidden sm:inline-flex;
   }
