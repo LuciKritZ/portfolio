@@ -1,7 +1,9 @@
 import { posts } from '#site/content';
 import PostsList from '@/components/posts/list.posts';
 import QueryPagination from '@/components/posts/pagination.post';
+import { siteConfig } from '@/config/site.config';
 import { sortPosts } from '@/lib/utils';
+import { Metadata } from 'next';
 
 const POSTS_PER_PAGE = 5;
 
@@ -10,6 +12,11 @@ interface BlogPageProps {
     page?: string;
   };
 }
+
+export const metadata: Metadata = {
+  title: siteConfig.name,
+  description: `Tech bytes by ${siteConfig.author}.`,
+};
 
 const BlogPage = ({ searchParams }: BlogPageProps) => {
   const currentPage: number = Number(searchParams?.page || 1);

@@ -1,9 +1,13 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { siteConfig } from '@/config/site.config';
+import { Metadata } from 'next';
 
-type Props = {};
+export const metadata: Metadata = {
+  title: `About Me | ${siteConfig.author}`,
+  description: siteConfig.description,
+};
 
-const page = (props: Props) => {
+const page = () => {
   return (
     <div className='container max-w-4xl py-6 lg:py-10 mx-auto'>
       <div className='flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8 spacing-x-4 lg:spacing-x-6'>
