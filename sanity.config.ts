@@ -1,18 +1,20 @@
-/**
- * This configuration is used to for the Sanity Studio that’s mounted on the `/app/cms/[[...index]]/page.tsx` route
- */
+'use client';
 
 import { visionTool } from '@sanity/vision';
 import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
 
 import { apiVersion, dataset, projectId } from './sanity/env';
-import { schema } from './sanity/schema';
+import { schema } from './sanity/schemas';
+import { structure } from './sanity/structure';
 
 export default defineConfig({
   basePath: '/cms',
   projectId,
   dataset,
   schema,
-  plugins: [structureTool(), visionTool({ defaultApiVersion: apiVersion })],
+  plugins: [
+    structureTool({ structure }),
+    visionTool({ defaultApiVersion: apiVersion }),
+  ],
 });

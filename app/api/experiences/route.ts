@@ -1,8 +1,8 @@
+import { ErrorHandler } from '@/lib/error-handler';
+import { GET_EXPERIENCES } from '@/queries';
 import { Experience } from '@/typings';
 
 import { client as sanityClient } from '../../../sanity/lib/client';
-import { ErrorHandler } from '../error-handler';
-import { GET_EXPERIENCES } from '../queries';
 
 async function getExperiences() {
   const experiences: Experience[] = await sanityClient.fetch(GET_EXPERIENCES);

@@ -1,8 +1,8 @@
+import { ErrorHandler } from '@/lib/error-handler';
+import { GET_SKILLS } from '@/queries';
 import { Skill } from '@/typings';
 
 import { client as sanityClient } from '../../../sanity/lib/client';
-import { ErrorHandler } from '../error-handler';
-import { GET_SKILLS } from '../queries';
 
 async function getSkills() {
   const skills: Skill[] = await sanityClient.fetch(GET_SKILLS);

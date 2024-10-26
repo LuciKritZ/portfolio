@@ -17,9 +17,7 @@ const defaultPortableTextComponents: Partial<PortableTextReactComponents> = {
   },
   list: {
     bullet: ({ children }) => (
-      <ul className='list-disc space-y-[1.5vh] ml-[2.5vh] text-[2vh]'>
-        {children}
-      </ul>
+      <ul className='list-disc space-y-2 ml-[2.5vh]'>{children}</ul>
     ),
   },
   listItem: {

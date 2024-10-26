@@ -10,6 +10,7 @@ export default defineType({
       title: 'Title',
       description: 'Title of the skill',
       type: 'string',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'image',
@@ -17,6 +18,19 @@ export default defineType({
       type: 'image',
       options: {
         hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        slugify: (input) =>
+          input
+            .toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ''),
       },
     }),
     defineField({

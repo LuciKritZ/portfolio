@@ -120,3 +120,8 @@ export interface CombinedTypingsForLandingPage {
   socials: Social[];
   testimonials: Testimonial[];
 }
+
+export interface ErrorMessage {
+  message: unknown;
+  status: 500;
+}
